@@ -80,8 +80,6 @@ namespace HTTU
             }
 
             
-            
-           
         }
 
         private void statsbutton_Click(object sender, EventArgs e)

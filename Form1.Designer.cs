@@ -79,7 +79,7 @@
             this.giris.Controls.Add(this.nameTB);
             this.giris.Controls.Add(this.checkBox1);
             this.giris.Controls.Add(this.sendmenubutton);
-            this.giris.Location = new System.Drawing.Point(248, 126);
+            this.giris.Location = new System.Drawing.Point(245, 128);
             this.giris.Name = "giris";
             this.giris.Size = new System.Drawing.Size(601, 379);
             this.giris.TabIndex = 2;
@@ -153,7 +153,7 @@
             this.anamenu.Controls.Add(this.statsbutton);
             this.anamenu.Controls.Add(this.testbutton);
             this.anamenu.Controls.Add(this.symptomsbutton);
-            this.anamenu.Location = new System.Drawing.Point(251, 129);
+            this.anamenu.Location = new System.Drawing.Point(245, 137);
             this.anamenu.Name = "anamenu";
             this.anamenu.Size = new System.Drawing.Size(601, 370);
             this.anamenu.TabIndex = 3;
@@ -212,7 +212,7 @@
             // aboutuspanel
             // 
             this.aboutuspanel.Controls.Add(this.backbutton3);
-            this.aboutuspanel.Location = new System.Drawing.Point(251, 138);
+            this.aboutuspanel.Location = new System.Drawing.Point(239, 132);
             this.aboutuspanel.Name = "aboutuspanel";
             this.aboutuspanel.Size = new System.Drawing.Size(601, 370);
             this.aboutuspanel.TabIndex = 6;
@@ -233,7 +233,6 @@
             // testpanel1
             // 
             this.testpanel1.Controls.Add(this.label4);
-            this.testpanel1.Controls.Add(this.statspanel);
             this.testpanel1.Location = new System.Drawing.Point(248, 145);
             this.testpanel1.Name = "testpanel1";
             this.testpanel1.Size = new System.Drawing.Size(601, 370);
@@ -251,7 +250,7 @@
             // statspanel
             // 
             this.statspanel.Controls.Add(this.backbutton2);
-            this.statspanel.Location = new System.Drawing.Point(3, 6);
+            this.statspanel.Location = new System.Drawing.Point(242, 131);
             this.statspanel.Name = "statspanel";
             this.statspanel.Size = new System.Drawing.Size(601, 370);
             this.statspanel.TabIndex = 5;
@@ -324,6 +323,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.testpanel1);
             this.Controls.Add(this.symtomspanel);
+            this.Controls.Add(this.statspanel);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.Info;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
