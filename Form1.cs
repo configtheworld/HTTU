@@ -88,19 +88,19 @@ namespace HTTU
         private void symptomsbutton_Click(object sender, EventArgs e)
         {
             listpanel.Clear();
-            listpanel.Add(anamenu);
+            
             listpanel.Add(symtomspanel);
             
-            listpanel[index:1].BringToFront();
+            listpanel[index:0].BringToFront();
         }
 
         private void testbutton_Click(object sender, EventArgs e)
         {
             listpanel.Clear();
-            listpanel.Add(anamenu);
+            
             listpanel.Add(testpanel1);
             
-            listpanel[index:1].BringToFront();
+            listpanel[index:0].BringToFront();
         }
 
         private void backbutton2_Click(object sender, EventArgs e)
