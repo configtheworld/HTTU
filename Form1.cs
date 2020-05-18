@@ -88,7 +88,8 @@ namespace HTTU
         private void symptomsbutton_Click(object sender, EventArgs e)
         {
             listpanel.Clear();
-            
+            listpanel.Add(testpanel1);
+            listpanel[index: 0].SendToBack();
             listpanel.Add(symtomspanel);
             
             listpanel[index:0].BringToFront();

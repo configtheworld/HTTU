@@ -52,6 +52,7 @@
             this.backbutton1 = new System.Windows.Forms.Button();
             this.symtomspanel = new System.Windows.Forms.Panel();
             this.cikis = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.giris.SuspendLayout();
             this.anamenu.SuspendLayout();
@@ -59,6 +60,7 @@
             this.testpanel1.SuspendLayout();
             this.statspanel.SuspendLayout();
             this.symtomspanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -76,7 +78,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(440, 29);
+            this.panel1.Location = new System.Drawing.Point(426, 23);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 82);
             this.panel1.TabIndex = 1;
@@ -89,7 +91,7 @@
             this.giris.Controls.Add(this.nameTB);
             this.giris.Controls.Add(this.checkBox1);
             this.giris.Controls.Add(this.sendmenubutton);
-            this.giris.Location = new System.Drawing.Point(3, 0);
+            this.giris.Location = new System.Drawing.Point(251, 121);
             this.giris.Name = "giris";
             this.giris.Size = new System.Drawing.Size(601, 379);
             this.giris.TabIndex = 2;
@@ -143,9 +145,11 @@
             // sendmenubutton
             // 
             this.sendmenubutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sendmenubutton.Location = new System.Drawing.Point(101, 274);
+            this.sendmenubutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.sendmenubutton.Image = ((System.Drawing.Image)(resources.GetObject("sendmenubutton.Image")));
+            this.sendmenubutton.Location = new System.Drawing.Point(76, 261);
             this.sendmenubutton.Name = "sendmenubutton";
-            this.sendmenubutton.Size = new System.Drawing.Size(115, 53);
+            this.sendmenubutton.Size = new System.Drawing.Size(172, 93);
             this.sendmenubutton.TabIndex = 0;
             this.sendmenubutton.Text = "Sign in";
             this.sendmenubutton.UseVisualStyleBackColor = true;
@@ -227,9 +231,8 @@
             // 
             // testpanel1
             // 
-            this.testpanel1.Controls.Add(this.giris);
             this.testpanel1.Controls.Add(this.label4);
-            this.testpanel1.Location = new System.Drawing.Point(0, 3);
+            this.testpanel1.Location = new System.Drawing.Point(0, 12);
             this.testpanel1.Name = "testpanel1";
             this.testpanel1.Size = new System.Drawing.Size(601, 370);
             this.testpanel1.TabIndex = 7;
@@ -265,9 +268,11 @@
             // backbutton1
             // 
             this.backbutton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backbutton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.backbutton1.Image = ((System.Drawing.Image)(resources.GetObject("backbutton1.Image")));
             this.backbutton1.Location = new System.Drawing.Point(14, 17);
             this.backbutton1.Name = "backbutton1";
-            this.backbutton1.Size = new System.Drawing.Size(204, 62);
+            this.backbutton1.Size = new System.Drawing.Size(204, 75);
             this.backbutton1.TabIndex = 0;
             this.backbutton1.Text = "covid 19 symptoms";
             this.backbutton1.UseVisualStyleBackColor = true;
@@ -276,8 +281,9 @@
             // symtomspanel
             // 
             this.symtomspanel.Controls.Add(this.testpanel1);
+            this.symtomspanel.Controls.Add(this.pictureBox1);
             this.symtomspanel.Controls.Add(this.backbutton1);
-            this.symtomspanel.Location = new System.Drawing.Point(254, 121);
+            this.symtomspanel.Location = new System.Drawing.Point(248, 121);
             this.symtomspanel.Name = "symtomspanel";
             this.symtomspanel.Size = new System.Drawing.Size(601, 382);
             this.symtomspanel.TabIndex = 4;
@@ -294,11 +300,21 @@
             this.cikis.UseVisualStyleBackColor = true;
             this.cikis.Click += new System.EventHandler(this.cikis_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(219, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(290, 315);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1058, 564);
+            this.Controls.Add(this.giris);
             this.Controls.Add(this.cikis);
             this.Controls.Add(this.symtomspanel);
             this.Controls.Add(this.anamenu);
@@ -320,6 +336,7 @@
             this.testpanel1.PerformLayout();
             this.statspanel.ResumeLayout(false);
             this.symtomspanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,6 +366,7 @@
         private System.Windows.Forms.Button backbutton1;
         private System.Windows.Forms.Panel symtomspanel;
         private System.Windows.Forms.Button cikis;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
