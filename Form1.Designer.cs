@@ -50,8 +50,8 @@
             this.backbutton2 = new System.Windows.Forms.Button();
             this.backbutton1 = new System.Windows.Forms.Button();
             this.symtomspanel = new System.Windows.Forms.Panel();
-            this.cikis = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cikis = new System.Windows.Forms.Button();
             this.giris.SuspendLayout();
             this.anamenu.SuspendLayout();
             this.aboutuspanel.SuspendLayout();
@@ -69,6 +69,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(274, 111);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // giris
             // 
@@ -108,15 +109,18 @@
             // 
             this.passwordTB.Location = new System.Drawing.Point(211, 137);
             this.passwordTB.Name = "passwordTB";
+            this.passwordTB.PasswordChar = '*';
             this.passwordTB.Size = new System.Drawing.Size(182, 32);
             this.passwordTB.TabIndex = 3;
+            this.passwordTB.TextChanged += new System.EventHandler(this.passwordTB_TextChanged);
             // 
             // nameTB
             // 
-            this.nameTB.Location = new System.Drawing.Point(211, 74);
+            this.nameTB.Location = new System.Drawing.Point(211, 80);
             this.nameTB.Name = "nameTB";
             this.nameTB.Size = new System.Drawing.Size(182, 32);
             this.nameTB.TabIndex = 2;
+            this.nameTB.TextChanged += new System.EventHandler(this.nameTB_TextChanged);
             // 
             // checkBox1
             // 
@@ -128,6 +132,7 @@
             this.checkBox1.TabIndex = 1;
             this.checkBox1.Text = "Accept Terms and Conditions";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // sendmenubutton
             // 
@@ -286,6 +291,15 @@
             this.symtomspanel.Size = new System.Drawing.Size(601, 382);
             this.symtomspanel.TabIndex = 4;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(219, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(290, 315);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // cikis
             // 
             this.cikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -297,15 +311,6 @@
             this.cikis.TabIndex = 7;
             this.cikis.UseVisualStyleBackColor = true;
             this.cikis.Click += new System.EventHandler(this.cikis_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(219, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(290, 315);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -324,6 +329,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.giris.ResumeLayout(false);
             this.giris.PerformLayout();
             this.anamenu.ResumeLayout(false);
