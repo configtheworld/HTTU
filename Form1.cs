@@ -37,7 +37,7 @@ namespace HTTU
             listpanel.Add(anamenu);
             listpanel.Add(aboutuspanel);
 
-            listpanel[index: 1].BringToFront();
+            listpanel[index: 0].BringToFront();
         }
 
         private void backbutton3_Click(object sender, EventArgs e)
@@ -117,6 +117,11 @@ namespace HTTU
             listpanel.Add(anamenu);
             
             listpanel[index:0].BringToFront();
+        }
+
+        private void cikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

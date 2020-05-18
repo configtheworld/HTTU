@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.giris = new System.Windows.Forms.Panel();
@@ -50,6 +51,7 @@
             this.backbutton2 = new System.Windows.Forms.Button();
             this.backbutton1 = new System.Windows.Forms.Button();
             this.symtomspanel = new System.Windows.Forms.Panel();
+            this.cikis = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.giris.SuspendLayout();
             this.anamenu.SuspendLayout();
@@ -280,11 +282,24 @@
             this.symtomspanel.Size = new System.Drawing.Size(601, 382);
             this.symtomspanel.TabIndex = 4;
             // 
+            // cikis
+            // 
+            this.cikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cikis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.cikis.Image = ((System.Drawing.Image)(resources.GetObject("cikis.Image")));
+            this.cikis.Location = new System.Drawing.Point(957, 473);
+            this.cikis.Name = "cikis";
+            this.cikis.Size = new System.Drawing.Size(80, 79);
+            this.cikis.TabIndex = 7;
+            this.cikis.UseVisualStyleBackColor = true;
+            this.cikis.Click += new System.EventHandler(this.cikis_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1138, 539);
+            this.ClientSize = new System.Drawing.Size(1058, 564);
+            this.Controls.Add(this.cikis);
             this.Controls.Add(this.symtomspanel);
             this.Controls.Add(this.anamenu);
             this.Controls.Add(this.aboutuspanel);
@@ -333,6 +348,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button backbutton1;
         private System.Windows.Forms.Panel symtomspanel;
+        private System.Windows.Forms.Button cikis;
     }
 }
 
