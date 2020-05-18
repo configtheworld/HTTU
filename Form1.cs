@@ -32,6 +32,7 @@ namespace HTTU
 
             listpanel.Clear();
             listpanel.Add(anamenu);
+
             listpanel.Add(aboutuspanel);
 
             listpanel[index: 0].BringToFront();
