@@ -44,11 +44,11 @@
             this.backbutton2 = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.profilebutton = new System.Windows.Forms.Button();
             this.testbuttondash = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menubackbutton = new System.Windows.Forms.Button();
             this.cikis = new System.Windows.Forms.Button();
-            this.profilebutton = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.testpanel.SuspendLayout();
             this.aboutuspanel.SuspendLayout();
             this.symtomspanel.SuspendLayout();
@@ -59,6 +59,7 @@
             // 
             // testpanel
             // 
+            this.testpanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("testpanel.BackgroundImage")));
             this.testpanel.Controls.Add(this.testbutton);
             this.testpanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.testpanel.Location = new System.Drawing.Point(406, 59);
@@ -105,7 +106,7 @@
             this.statsbutton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statsbutton.ForeColor = System.Drawing.SystemColors.Info;
             this.statsbutton.Image = ((System.Drawing.Image)(resources.GetObject("statsbutton.Image")));
-            this.statsbutton.Location = new System.Drawing.Point(36, 298);
+            this.statsbutton.Location = new System.Drawing.Point(36, 309);
             this.statsbutton.Name = "statsbutton";
             this.statsbutton.Size = new System.Drawing.Size(204, 62);
             this.statsbutton.TabIndex = 2;
@@ -121,7 +122,7 @@
             this.symptomsbutton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.symptomsbutton.ForeColor = System.Drawing.SystemColors.Info;
             this.symptomsbutton.Image = ((System.Drawing.Image)(resources.GetObject("symptomsbutton.Image")));
-            this.symptomsbutton.Location = new System.Drawing.Point(36, 209);
+            this.symptomsbutton.Location = new System.Drawing.Point(36, 228);
             this.symptomsbutton.Name = "symptomsbutton";
             this.symptomsbutton.Size = new System.Drawing.Size(204, 62);
             this.symptomsbutton.TabIndex = 0;
@@ -232,6 +233,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.Controls.Add(this.profilebutton);
             this.panel2.Controls.Add(this.testbuttondash);
             this.panel2.Controls.Add(this.panel1);
@@ -241,8 +243,21 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(260, 570);
+            this.panel2.Size = new System.Drawing.Size(262, 595);
             this.panel2.TabIndex = 14;
+            // 
+            // profilebutton
+            // 
+            this.profilebutton.BackColor = System.Drawing.Color.Transparent;
+            this.profilebutton.FlatAppearance.BorderSize = 0;
+            this.profilebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profilebutton.Image = ((System.Drawing.Image)(resources.GetObject("profilebutton.Image")));
+            this.profilebutton.Location = new System.Drawing.Point(90, 118);
+            this.profilebutton.Name = "profilebutton";
+            this.profilebutton.Size = new System.Drawing.Size(95, 92);
+            this.profilebutton.TabIndex = 15;
+            this.profilebutton.UseVisualStyleBackColor = false;
+            this.profilebutton.Click += new System.EventHandler(this.profilebutton_Click);
             // 
             // testbuttondash
             // 
@@ -257,6 +272,15 @@
             this.testbuttondash.TabIndex = 14;
             this.testbuttondash.UseVisualStyleBackColor = false;
             this.testbuttondash.Click += new System.EventHandler(this.testbuttondash_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Location = new System.Drawing.Point(0, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(260, 110);
+            this.panel1.TabIndex = 13;
             // 
             // menubackbutton
             // 
@@ -282,33 +306,12 @@
             this.cikis.UseVisualStyleBackColor = true;
             this.cikis.Click += new System.EventHandler(this.cikis_Click);
             // 
-            // profilebutton
-            // 
-            this.profilebutton.FlatAppearance.BorderSize = 0;
-            this.profilebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profilebutton.Image = ((System.Drawing.Image)(resources.GetObject("profilebutton.Image")));
-            this.profilebutton.Location = new System.Drawing.Point(90, 129);
-            this.profilebutton.Name = "profilebutton";
-            this.profilebutton.Size = new System.Drawing.Size(77, 66);
-            this.profilebutton.TabIndex = 15;
-            this.profilebutton.UseVisualStyleBackColor = true;
-            this.profilebutton.Click += new System.EventHandler(this.profilebutton_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Location = new System.Drawing.Point(0, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(260, 110);
-            this.panel1.TabIndex = 13;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1170, 570);
+            this.ClientSize = new System.Drawing.Size(1203, 595);
             this.Controls.Add(this.testpanel);
             this.Controls.Add(this.symtomspanel);
             this.Controls.Add(this.statspanel);
@@ -317,6 +320,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "Menu";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.testpanel.ResumeLayout(false);
             this.aboutuspanel.ResumeLayout(false);
             this.aboutuspanel.PerformLayout();

@@ -117,5 +117,10 @@ namespace HTTU
             Profile profile = new Profile();
             profile.Show();
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
