@@ -21,5 +21,10 @@ namespace HTTU
         {
 
         }
+
+        private void Profile_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

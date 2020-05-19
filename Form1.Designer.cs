@@ -49,7 +49,7 @@
             this.giris.Controls.Add(this.nameTB);
             this.giris.Controls.Add(this.checkBox1);
             this.giris.Controls.Add(this.sendmenubutton);
-            this.giris.Location = new System.Drawing.Point(253, 123);
+            this.giris.Location = new System.Drawing.Point(240, 123);
             this.giris.Name = "giris";
             this.giris.Size = new System.Drawing.Size(601, 379);
             this.giris.TabIndex = 2;

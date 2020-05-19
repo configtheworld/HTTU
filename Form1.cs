@@ -35,30 +35,35 @@ namespace HTTU
 
         private void sendmenubutton_Click(object sender, EventArgs e)
         {
-            
-                        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\berk_\source\repos\HTTU\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
-                        SqlDataAdapter sqa = new SqlDataAdapter("Select count(*) From tableSign where Username ='" + nameTB.Text + "'and Password ='" + passwordTB.Text +"'",con);
-                        DataTable dt = new DataTable();
-                        sqa.Fill(dt);
-                        if (dt.Rows[0][0].ToString()=="1" && checkBox1.Checked)
-                        {
-                            Menu menu = new Menu();
-                            menu.Show();
-                            
-            
-                        }
-            
-            
-                        if (checkBox1.Checked==false)
-                        {
-                            MessageBox.Show("Please accept the terms conditions before using the app ");
-                        }
-                        else if(dt.Rows[0][0].ToString() != "1")
-                        {
-                            MessageBox.Show("Username or Password is incorrect please try again!");
-            
-                        }
-                        
+            contodb();
+        }
+
+        private void contodb()
+        {
+            /*SqlConnection con =
+                new SqlConnection(
+                    @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\berk_\source\repos\HTTU\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlDataAdapter sqa =
+                new SqlDataAdapter(
+                    "Select count(*) From tableSign where Username ='" + nameTB.Text + "'and Password ='" + passwordTB.Text +
+                    "'", con);
+            DataTable dt = new DataTable();
+            sqa.Fill(dt);
+            if (dt.Rows[0][0].ToString() == "1" && checkBox1.Checked)
+            {
+                */Menu menu = new Menu();
+                menu.Show();/*
+            }
+
+
+            if (checkBox1.Checked == false)
+            {
+                MessageBox.Show("Please accept the terms conditions before using the app ");
+            }
+            else if (dt.Rows[0][0].ToString() != "1")
+            {
+                MessageBox.Show("Username or Password is incorrect please try again!");
+            }*/
         }
 
         private void cikis_Click(object sender, EventArgs e)
