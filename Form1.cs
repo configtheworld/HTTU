@@ -28,25 +28,6 @@ namespace HTTU
             
         }
 
-        private void aboutusbutton_Click(object sender, EventArgs e)
-        {
-
-            listpanel.Clear();
-            listpanel.Add(anamenu);
-            listpanel.Add(aboutuspanel);
-
-            listpanel[index: 0].BringToFront();
-            
-        }
-
-        private void backbutton3_Click(object sender, EventArgs e)
-        {
-            listpanel.Clear();
-            listpanel.Add(anamenu);
-           
-            listpanel[index:0].BringToFront();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             
@@ -54,86 +35,30 @@ namespace HTTU
 
         private void sendmenubutton_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\doki_\OneDrive\Belgeler\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sqa = new SqlDataAdapter("Select count(*) From tableSign where Username ='" + nameTB.Text + "'and Password ='" + passwordTB.Text +"'",con);
-            DataTable dt = new DataTable();
-            sqa.Fill(dt);
-            if (dt.Rows[0][0].ToString()=="1" && checkBox1.Checked)
-            {
-                listpanel.Clear();
-                listpanel.Add(giris);
-                listpanel.Add(anamenu);
-                listpanel[index: 1].BringToFront();
-                
-
-            }
-
-
-            if (checkBox1.Checked==false)
-            {
-                MessageBox.Show("Please accept the terms conditions before using the app ");
-            }
-            else if(dt.Rows[0][0].ToString() != "1")
-            {
-                MessageBox.Show("Username or Password is incorrect please try again!");
-
-            }
-
             
-        }
-
-        private void statsbutton_Click(object sender, EventArgs e)
-        {
-            listpanel.Clear();
-            listpanel.Add(anamenu);
+                        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\berk_\source\repos\HTTU\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
+                        SqlDataAdapter sqa = new SqlDataAdapter("Select count(*) From tableSign where Username ='" + nameTB.Text + "'and Password ='" + passwordTB.Text +"'",con);
+                        DataTable dt = new DataTable();
+                        sqa.Fill(dt);
+                        if (dt.Rows[0][0].ToString()=="1" && checkBox1.Checked)
+                        {
+                            Menu menu = new Menu();
+                            menu.Show();
+                            
             
-            listpanel.Add(statspanel);
-            listpanel[index: 0].SendToBack();
-            listpanel[index:1].BringToFront();
-        }
-
-        private void aboutusbutton_Click_1(object sender, EventArgs e)
-        {
-            listpanel.Clear();
-            listpanel.Add(anamenu);
-
-            listpanel.Add(aboutuspanel);
-
-            listpanel[index: 1].BringToFront();
-        }
-
-        private void symptomsbutton_Click(object sender, EventArgs e)
-        {
-            listpanel.Clear();
-            listpanel.Add(anamenu);
-            listpanel.Add(symtomspanel);
+                        }
             
-            listpanel[index:1].BringToFront();
-        }
-
-        private void testbutton_Click(object sender, EventArgs e)
-        {
-            listpanel.Clear();
-            listpanel.Add(anamenu);
-            listpanel.Add(testpanel1);
             
-            listpanel[index:1].BringToFront();
-        }
-
-        private void backbutton2_Click(object sender, EventArgs e)
-        {
-            listpanel.Clear();
-            listpanel.Add(anamenu);
-           
-            listpanel[index:0].BringToFront();
-        }
-
-        private void backbutton1_Click(object sender, EventArgs e)
-        {
-            listpanel.Clear();
-            listpanel.Add(anamenu);
+                        if (checkBox1.Checked==false)
+                        {
+                            MessageBox.Show("Please accept the terms conditions before using the app ");
+                        }
+                        else if(dt.Rows[0][0].ToString() != "1")
+                        {
+                            MessageBox.Show("Username or Password is incorrect please try again!");
             
-            listpanel[index:0].BringToFront();
+                        }
+                        
         }
 
         private void cikis_Click(object sender, EventArgs e)
