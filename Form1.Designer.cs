@@ -38,6 +38,7 @@
             this.sendmenubutton = new System.Windows.Forms.Button();
             this.cikis = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MuteButton = new System.Windows.Forms.Button();
             this.giris.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -140,11 +141,24 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // MuteButton
+            // 
+            this.MuteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MuteButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.MuteButton.Image = ((System.Drawing.Image)(resources.GetObject("MuteButton.Image")));
+            this.MuteButton.Location = new System.Drawing.Point(32, 489);
+            this.MuteButton.Name = "MuteButton";
+            this.MuteButton.Size = new System.Drawing.Size(90, 63);
+            this.MuteButton.TabIndex = 9;
+            this.MuteButton.UseVisualStyleBackColor = true;
+            this.MuteButton.Click += new System.EventHandler(this.MuteButton_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1058, 564);
+            this.Controls.Add(this.MuteButton);
             this.Controls.Add(this.giris);
             this.Controls.Add(this.cikis);
             this.Controls.Add(this.panel1);
@@ -170,6 +184,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button cikis;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button MuteButton;
     }
 }
 

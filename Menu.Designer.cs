@@ -49,6 +49,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.menubackbutton = new System.Windows.Forms.Button();
             this.cikis = new System.Windows.Forms.Button();
+            this.MuteButton = new System.Windows.Forms.Button();
             this.testpanel.SuspendLayout();
             this.aboutuspanel.SuspendLayout();
             this.symtomspanel.SuspendLayout();
@@ -62,7 +63,7 @@
             this.testpanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("testpanel.BackgroundImage")));
             this.testpanel.Controls.Add(this.testbutton);
             this.testpanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.testpanel.Location = new System.Drawing.Point(406, 59);
+            this.testpanel.Location = new System.Drawing.Point(406, 62);
             this.testpanel.Name = "testpanel";
             this.testpanel.Size = new System.Drawing.Size(617, 382);
             this.testpanel.TabIndex = 8;
@@ -279,7 +280,7 @@
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(260, 110);
+            this.panel1.Size = new System.Drawing.Size(262, 110);
             this.panel1.TabIndex = 13;
             // 
             // menubackbutton
@@ -306,12 +307,25 @@
             this.cikis.UseVisualStyleBackColor = true;
             this.cikis.Click += new System.EventHandler(this.cikis_Click);
             // 
+            // MuteButton
+            // 
+            this.MuteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MuteButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.MuteButton.Image = ((System.Drawing.Image)(resources.GetObject("MuteButton.Image")));
+            this.MuteButton.Location = new System.Drawing.Point(933, 471);
+            this.MuteButton.Name = "MuteButton";
+            this.MuteButton.Size = new System.Drawing.Size(90, 63);
+            this.MuteButton.TabIndex = 9;
+            this.MuteButton.UseVisualStyleBackColor = true;
+            this.MuteButton.Click += new System.EventHandler(this.MuteButton_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1203, 595);
+            this.Controls.Add(this.MuteButton);
             this.Controls.Add(this.testpanel);
             this.Controls.Add(this.symtomspanel);
             this.Controls.Add(this.statspanel);
@@ -354,5 +368,6 @@
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Button profilebutton;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button MuteButton;
     }
 }

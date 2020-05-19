@@ -15,9 +15,12 @@ namespace HTTU
     {
 
         List<Panel> listpanel = new List<Panel>();
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
         public Menu()
         {
             InitializeComponent();
+            player.SoundLocation = "coffin-dance-official-music-video-hd.wav";
+            
         }
         // menu buttonları
         private void symptomsbutton_Click(object sender, EventArgs e)
@@ -120,6 +123,15 @@ namespace HTTU
 
         private void Menu_Load(object sender, EventArgs e)
         {
+
+        }
+
+        bool playerstate = false;
+        private void MuteButton_Click(object sender, EventArgs e)
+        {
+            //menunun mute butonu
+           
+            playerstate = mutesong.mute(player, playerstate);
 
         }
     }
