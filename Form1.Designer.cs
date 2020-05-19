@@ -69,11 +69,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 80);
+            this.label2.Location = new System.Drawing.Point(97, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 20);
+            this.label2.Size = new System.Drawing.Size(85, 20);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Name and Surname";
+            this.label2.Text = "UserName";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // passwordTB
