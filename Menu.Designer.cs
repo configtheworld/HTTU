@@ -76,7 +76,7 @@
             this.testbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.testbutton.ForeColor = System.Drawing.Color.Transparent;
             this.testbutton.Image = ((System.Drawing.Image)(resources.GetObject("testbutton.Image")));
-            this.testbutton.Location = new System.Drawing.Point(151, 14);
+            this.testbutton.Location = new System.Drawing.Point(154, 16);
             this.testbutton.Name = "testbutton";
             this.testbutton.Size = new System.Drawing.Size(315, 353);
             this.testbutton.TabIndex = 1;
