@@ -16,29 +16,42 @@ namespace HTTU
 
         private SqlCommand cmd;
         private SqlDataReader reader;
-
+        
         public void newUser(TextBox Username, TextBox Password, TextBox repassword, GroupBox group)
         {
-            if (Password.Text == repassword.Text)
+            con.Open();
+            cmd=new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "select *from tableSign where Username= '" + Username.Text + "'";
+            reader = cmd.ExecuteReader();
+            if (reader.Read()==false)
             {
-                con.Open();
-                cmd = new SqlCommand();
-                cmd.Connection = con;
-                cmd.CommandText = "insert into tableSign values('" + Username.Text + "','" + Password.Text +  "')";
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("User Added!");
-                foreach (Control item in group.Controls)
+                if (Password.Text == repassword.Text)
                 {
-                    if (item is TextBox)
+                    con.Close();
+                    con.Open();
+                    cmd = new SqlCommand();
+                    cmd.Connection = con;
+                    cmd.CommandText = "insert into tableSign values('" + Username.Text + "','" + Password.Text + "')";
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("User Added!");
+                    foreach (Control item in group.Controls)
                     {
-                        item.Text = "";
+                        if (item is TextBox)
+                        {
+                            item.Text = "";
+                        }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Passwords don't match please check again", "Error");
+                } 
             }
             else
             {
-                MessageBox.Show("Passwords don't match please check again", "Error");
+                MessageBox.Show("Username already exists");
             }
         }
     }
