@@ -38,12 +38,40 @@ namespace HTTU
         
         private void sendmenubutton_Click(object sender, EventArgs e)
         {
-            DatabaseConnection.Contodb();
-            Menu menu = new Menu();
-            menu.Show();
+            var dt = connectdatabase();
+            if (dt.Rows[0][0].ToString() == "1" && checkBox1.Checked)
+            {
+                Menu menu = new Menu();
+                menu.Show();
+            }
+
+
+            if (checkBox1.Checked == false)
+            {
+                MessageBox.Show("Please accept the terms conditions before using the app ");
+            }
+            else if (dt.Rows[0][0].ToString() != "1")
+            {
+                MessageBox.Show("Username or Password is incorrect please try again!");
+            }
+            
         }
 
-       
+        private DataTable connectdatabase()
+        {
+            SqlConnection con =
+                new SqlConnection(
+                    @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\doki_\OneDrive\Belgeler\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlDataAdapter sqa =
+                new SqlDataAdapter(
+                    "Select count(*) From tableSign where Username ='" + nameTB.Text + "'and Password ='" + passwordTB.Text +
+                    "'", con);
+            DataTable dt = new DataTable();
+            sqa.Fill(dt);
+            return dt;
+        }
+
+
         private void cikis_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -81,6 +109,13 @@ namespace HTTU
             //girişin mute butonu
             
             playerstate = mutesong.mute(player, playerstate);
+        }
+
+        private void registerbutton_Click(object sender, EventArgs e)
+        {
+          UserRegisterForm userRegister = new UserRegisterForm();
+          userRegister.ShowDialog();
+
         }
     }
 }
