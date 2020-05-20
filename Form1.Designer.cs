@@ -39,11 +39,13 @@
             this.cikis = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.MuteButton = new System.Windows.Forms.Button();
+            this.registerbutton = new System.Windows.Forms.Button();
             this.giris.SuspendLayout();
             this.SuspendLayout();
             // 
             // giris
             // 
+            this.giris.Controls.Add(this.registerbutton);
             this.giris.Controls.Add(this.label3);
             this.giris.Controls.Add(this.label2);
             this.giris.Controls.Add(this.passwordTB);
@@ -111,7 +113,7 @@
             this.sendmenubutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sendmenubutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.sendmenubutton.Image = ((System.Drawing.Image)(resources.GetObject("sendmenubutton.Image")));
-            this.sendmenubutton.Location = new System.Drawing.Point(76, 279);
+            this.sendmenubutton.Location = new System.Drawing.Point(86, 267);
             this.sendmenubutton.Name = "sendmenubutton";
             this.sendmenubutton.Size = new System.Drawing.Size(164, 75);
             this.sendmenubutton.TabIndex = 0;
@@ -153,6 +155,20 @@
             this.MuteButton.UseVisualStyleBackColor = true;
             this.MuteButton.Click += new System.EventHandler(this.MuteButton_Click_1);
             // 
+            // registerbutton
+            // 
+            this.registerbutton.FlatAppearance.BorderSize = 0;
+            this.registerbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.registerbutton.Image = ((System.Drawing.Image)(resources.GetObject("registerbutton.Image")));
+            this.registerbutton.Location = new System.Drawing.Point(341, 267);
+            this.registerbutton.Name = "registerbutton";
+            this.registerbutton.Size = new System.Drawing.Size(164, 75);
+            this.registerbutton.TabIndex = 6;
+            this.registerbutton.Text = "Sign up";
+            this.registerbutton.UseVisualStyleBackColor = true;
+            this.registerbutton.Click += new System.EventHandler(this.registerbutton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -185,6 +201,7 @@
         private System.Windows.Forms.Button cikis;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button MuteButton;
+        private System.Windows.Forms.Button registerbutton;
     }
 }
 
