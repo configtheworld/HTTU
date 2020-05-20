@@ -17,12 +17,12 @@ namespace HTTU
         private SqlCommand cmd;
         private SqlDataReader reader;
         
-        public void newUser(TextBox Username, TextBox Password, TextBox repassword, GroupBox group)
+        public void newUser(TextBox Username, TextBox Password, TextBox repassword, TextBox City, GroupBox group)
         {
             con.Open();
             cmd=new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "select *from tableSign where Username= '" + Username.Text + "'";
+            cmd.CommandText = "select *from tableSignLog where Username='" + Username.Text + "'";
             reader = cmd.ExecuteReader();
             if (reader.Read()==false)
             {
@@ -32,7 +32,7 @@ namespace HTTU
                     con.Open();
                     cmd = new SqlCommand();
                     cmd.Connection = con;
-                    cmd.CommandText = "insert into tableSign values('" + Username.Text + "','" + Password.Text + "')";
+                    cmd.CommandText = "insert into tableSignLog values('" + Username.Text + "','" + Password.Text + "','" + City.Text + "')";
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("User Added!");
@@ -51,7 +51,7 @@ namespace HTTU
             }
             else
             {
-                MessageBox.Show("Username already exists");
+                MessageBox.Show("Username already exists","Error");
             }
         }
     }
