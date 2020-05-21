@@ -16,7 +16,10 @@ namespace HTTU
         SqlConnection con_coordinates = new SqlConnection(@"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = coordinates; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
         SqlCommand cmd;
         int il_id;
-
+        float Lat, Long;
+        
+      
+       
         public UserRegisterForm()
         {
             InitializeComponent();
@@ -54,6 +57,19 @@ namespace HTTU
 
         private void RegisterNowButton_Click(object sender, EventArgs e)
         {
+            con_coordinates.Open();
+            cmd.CommandText = "SELECT lat FROM coordinates.dbo.iller where ilce=@_ilce";
+            cmd.Parameters.AddWithValue("_ilce", Country.SelectedItem.ToString());
+            Lat = (Int32)cmd.ExecuteScalar();
+            cmd.Parameters.Clear();
+
+            cmd.CommandText = "SELECT long FROM coordinates.dbo.iller where ilce=@_ilce";
+            cmd.Parameters.AddWithValue("_ilce", Country.SelectedItem.ToString());
+            Long = (Int32)cmd.ExecuteScalar();
+            cmd.Parameters.Clear();
+
+
+
             UserAndPassControl user= new UserAndPassControl();
             user.newUser(nameTB,passwordTB,Country,Provience,ConfirmTB,Lat,Long,groupBox1);
             this.Close();
@@ -71,10 +87,10 @@ namespace HTTU
             cmd.CommandText = "SELECT id FROM coordinates.dbo.iller where sehir=@_sehir";
             cmd.Parameters.AddWithValue("_sehir", Country.SelectedItem.ToString());
             il_id = (Int32)cmd.ExecuteScalar();
+
             Provience.Items.Clear();
 
             cmd.CommandText = "SELECT ilce From coordinates.dbo.ilceler where il=@_ilce";
-
             cmd.Parameters.AddWithValue("_ilce",il_id);
             cmd.ExecuteNonQuery();
 
@@ -86,6 +102,7 @@ namespace HTTU
             {
                 Provience.Items.Add(dr["ilce"].ToString());
             }
+
             cmd.Parameters.Clear();
             con_coordinates.Close();
         }
