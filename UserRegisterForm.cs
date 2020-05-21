@@ -12,11 +12,16 @@ namespace HTTU
 {
     public partial class UserRegisterForm : Form
     {
+
         public UserRegisterForm()
         {
             InitializeComponent();
         }
 
+        public void closeoperation()
+        {
+            this.Close();
+        }
         private void UserRegisterForm_Load(object sender, EventArgs e)
         {
 
@@ -25,7 +30,7 @@ namespace HTTU
         private void RegisterNowButton_Click(object sender, EventArgs e)
         {
             UserAndPassControl user= new UserAndPassControl();
-            user.newUser(nameTB,passwordTB,ConfirmTB,groupBox1);
+            user.newUser(nameTB,passwordTB,ConfirmTB,cityTB,groupBox1);
             this.Close();
         }
     }
