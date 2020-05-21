@@ -81,6 +81,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sonuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sonuc.Designer.cs">
+      <DependentUpon>Sonuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sonuc1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sonuc1.Designer.cs">
+      <DependentUpon>Sonuc1.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserAndPassControl.cs" />
     <Compile Include="UserRegisterForm.cs">
       <SubType>Form</SubType>
@@ -109,6 +121,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Sonuc.resx">
+      <DependentUpon>Sonuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sonuc1.resx">
+      <DependentUpon>Sonuc1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserRegisterForm.resx">
       <DependentUpon>UserRegisterForm.cs</DependentUpon>
     </EmbeddedResource>

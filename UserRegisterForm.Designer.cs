@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserRegisterForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.RegisterNowButton = new System.Windows.Forms.Button();
+            this.ConfirmTB = new System.Windows.Forms.TextBox();
+            this.Confirmpass = new System.Windows.Forms.Label();
             this.PasswordRegister = new System.Windows.Forms.Label();
             this.UserNameRegister = new System.Windows.Forms.Label();
             this.passwordTB = new System.Windows.Forms.TextBox();
             this.nameTB = new System.Windows.Forms.TextBox();
-            this.Confirmpass = new System.Windows.Forms.Label();
-            this.ConfirmTB = new System.Windows.Forms.TextBox();
-            this.RegisterNowButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,12 +49,47 @@
             this.groupBox1.Controls.Add(this.UserNameRegister);
             this.groupBox1.Controls.Add(this.passwordTB);
             this.groupBox1.Controls.Add(this.nameTB);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.ForeColor = System.Drawing.Color.MediumSpringGreen;
             this.groupBox1.Location = new System.Drawing.Point(47, 34);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(692, 368);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Registration Page";
+            // 
+            // RegisterNowButton
+            // 
+            this.RegisterNowButton.FlatAppearance.BorderSize = 0;
+            this.RegisterNowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegisterNowButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterNowButton.ForeColor = System.Drawing.SystemColors.Info;
+            this.RegisterNowButton.Image = ((System.Drawing.Image)(resources.GetObject("RegisterNowButton.Image")));
+            this.RegisterNowButton.Location = new System.Drawing.Point(336, 264);
+            this.RegisterNowButton.Name = "RegisterNowButton";
+            this.RegisterNowButton.Size = new System.Drawing.Size(142, 60);
+            this.RegisterNowButton.TabIndex = 12;
+            this.RegisterNowButton.Text = "Register Now";
+            this.RegisterNowButton.UseVisualStyleBackColor = true;
+            this.RegisterNowButton.Click += new System.EventHandler(this.RegisterNowButton_Click);
+            // 
+            // ConfirmTB
+            // 
+            this.ConfirmTB.Location = new System.Drawing.Point(296, 192);
+            this.ConfirmTB.Name = "ConfirmTB";
+            this.ConfirmTB.PasswordChar = '*';
+            this.ConfirmTB.Size = new System.Drawing.Size(182, 22);
+            this.ConfirmTB.TabIndex = 11;
+            // 
+            // Confirmpass
+            // 
+            this.Confirmpass.AutoSize = true;
+            this.Confirmpass.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Confirmpass.Location = new System.Drawing.Point(140, 192);
+            this.Confirmpass.Name = "Confirmpass";
+            this.Confirmpass.Size = new System.Drawing.Size(140, 20);
+            this.Confirmpass.TabIndex = 10;
+            this.Confirmpass.Text = "Confirm Password";
             // 
             // PasswordRegister
             // 
@@ -90,38 +126,11 @@
             this.nameTB.Size = new System.Drawing.Size(182, 22);
             this.nameTB.TabIndex = 6;
             // 
-            // Confirmpass
-            // 
-            this.Confirmpass.AutoSize = true;
-            this.Confirmpass.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Confirmpass.Location = new System.Drawing.Point(140, 192);
-            this.Confirmpass.Name = "Confirmpass";
-            this.Confirmpass.Size = new System.Drawing.Size(140, 20);
-            this.Confirmpass.TabIndex = 10;
-            this.Confirmpass.Text = "Confirm Password";
-            // 
-            // ConfirmTB
-            // 
-            this.ConfirmTB.Location = new System.Drawing.Point(296, 192);
-            this.ConfirmTB.Name = "ConfirmTB";
-            this.ConfirmTB.PasswordChar = '*';
-            this.ConfirmTB.Size = new System.Drawing.Size(182, 22);
-            this.ConfirmTB.TabIndex = 11;
-            // 
-            // RegisterNowButton
-            // 
-            this.RegisterNowButton.Location = new System.Drawing.Point(336, 264);
-            this.RegisterNowButton.Name = "RegisterNowButton";
-            this.RegisterNowButton.Size = new System.Drawing.Size(142, 60);
-            this.RegisterNowButton.TabIndex = 12;
-            this.RegisterNowButton.Text = "Register Now";
-            this.RegisterNowButton.UseVisualStyleBackColor = true;
-            this.RegisterNowButton.Click += new System.EventHandler(this.RegisterNowButton_Click);
-            // 
             // UserRegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Name = "UserRegisterForm";

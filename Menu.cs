@@ -67,7 +67,7 @@ namespace HTTU
         private void cikis_Click(object sender, EventArgs e)
         {
             // çıkıs butonu
-            this.Close();
+            Application.Exit();
         }
 
         

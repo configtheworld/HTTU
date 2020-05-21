@@ -32,9 +32,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.countdowntext = new System.Windows.Forms.TextBox();
             this.StartTimer = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -72,6 +72,16 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "User Profile";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(545, 52);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(182, 45);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Show Message";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumSpringGreen;
@@ -90,16 +100,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(377, 316);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(545, 52);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 45);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Show Message";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // countdowntext
             // 
@@ -125,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(44)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(800, 525);
             this.Controls.Add(this.StartTimer);
             this.Controls.Add(this.countdowntext);
