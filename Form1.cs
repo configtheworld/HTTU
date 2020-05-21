@@ -62,7 +62,7 @@ namespace HTTU
         {
             SqlConnection con =
                 new SqlConnection(
-                    @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\doki_\OneDrive\Belgeler\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
+                    @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\suser\source\repos\HTTU\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
             SqlDataAdapter sqa =
                 new SqlDataAdapter(
                     "Select count(*) From tableSignAndLog where Username ='" + nameTB.Text + "'and Password ='" + passwordTB.Text +
