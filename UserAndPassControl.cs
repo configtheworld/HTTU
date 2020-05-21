@@ -12,7 +12,7 @@ namespace HTTU
     {
         SqlConnection con =
             new SqlConnection(
-                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\berk_\source\repos\HTTU\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
+                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\doki_\OneDrive\Belgeler\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private SqlCommand cmd;
         private SqlDataReader reader;

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.giris = new System.Windows.Forms.Panel();
+            this.forgotpass = new System.Windows.Forms.LinkLabel();
             this.registerbutton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,6 +46,7 @@
             // 
             // giris
             // 
+            this.giris.Controls.Add(this.forgotpass);
             this.giris.Controls.Add(this.registerbutton);
             this.giris.Controls.Add(this.label3);
             this.giris.Controls.Add(this.label2);
@@ -56,6 +58,18 @@
             this.giris.Name = "giris";
             this.giris.Size = new System.Drawing.Size(601, 379);
             this.giris.TabIndex = 2;
+            // 
+            // forgotpass
+            // 
+            this.forgotpass.ActiveLinkColor = System.Drawing.Color.Red;
+            this.forgotpass.AutoSize = true;
+            this.forgotpass.LinkColor = System.Drawing.Color.Red;
+            this.forgotpass.Location = new System.Drawing.Point(59, 195);
+            this.forgotpass.Name = "forgotpass";
+            this.forgotpass.Size = new System.Drawing.Size(209, 23);
+            this.forgotpass.TabIndex = 7;
+            this.forgotpass.TabStop = true;
+            this.forgotpass.Text = "Forgot my password";
             // 
             // registerbutton
             // 
@@ -94,20 +108,29 @@
             // 
             // passwordTB
             // 
+            this.passwordTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passwordTB.ForeColor = System.Drawing.Color.DarkGray;
             this.passwordTB.Location = new System.Drawing.Point(211, 137);
             this.passwordTB.Name = "passwordTB";
-            this.passwordTB.PasswordChar = '*';
-            this.passwordTB.Size = new System.Drawing.Size(182, 32);
+            this.passwordTB.Size = new System.Drawing.Size(182, 25);
             this.passwordTB.TabIndex = 3;
+            this.passwordTB.Text = "Password";
             this.passwordTB.TextChanged += new System.EventHandler(this.passwordTB_TextChanged);
+            this.passwordTB.Enter += new System.EventHandler(this.passwordTB_Enter);
+            this.passwordTB.Leave += new System.EventHandler(this.passwordTB_Leave);
             // 
             // nameTB
             // 
+            this.nameTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nameTB.ForeColor = System.Drawing.Color.DarkGray;
             this.nameTB.Location = new System.Drawing.Point(211, 80);
             this.nameTB.Name = "nameTB";
-            this.nameTB.Size = new System.Drawing.Size(182, 32);
+            this.nameTB.Size = new System.Drawing.Size(182, 25);
             this.nameTB.TabIndex = 2;
+            this.nameTB.Text = "UserName";
             this.nameTB.TextChanged += new System.EventHandler(this.nameTB_TextChanged);
+            this.nameTB.Enter += new System.EventHandler(this.nameTB_Enter);
+            this.nameTB.Leave += new System.EventHandler(this.nameTB_Leave);
             // 
             // checkBox1
             // 
@@ -202,6 +225,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button MuteButton;
         private System.Windows.Forms.Button registerbutton;
+        private System.Windows.Forms.LinkLabel forgotpass;
     }
 }
 

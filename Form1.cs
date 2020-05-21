@@ -61,7 +61,7 @@ namespace HTTU
         {
             SqlConnection con =
                 new SqlConnection(
-                    @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\berk_\source\repos\HTTU\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
+                    @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\doki_\OneDrive\Belgeler\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
             SqlDataAdapter sqa =
                 new SqlDataAdapter(
                     "Select count(*) From tableSignLog where Username ='" + nameTB.Text + "'and Password ='" + passwordTB.Text +
@@ -116,6 +116,44 @@ namespace HTTU
           UserRegisterForm userRegister = new UserRegisterForm();
           userRegister.ShowDialog();
 
+        }
+
+        private void nameTB_Enter(object sender, EventArgs e)
+        {
+            if (nameTB.Text=="UserName")
+            {
+                nameTB.Text = "";
+                
+            }
+        }
+
+        private void nameTB_Leave(object sender, EventArgs e)
+        {
+            if (nameTB.Text=="")
+            {
+                nameTB.Text = "UserName";
+                nameTB.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void passwordTB_Enter(object sender, EventArgs e)
+        {
+            if (passwordTB.Text=="Password")
+            {
+                passwordTB.Text = "";
+                passwordTB.PasswordChar = '*';
+            }
+        }
+
+        private char? empty = null;
+        private void passwordTB_Leave(object sender, EventArgs e)
+        {
+            if (passwordTB.Text=="")
+            {
+                passwordTB.Text = "Password";
+                passwordTB.ForeColor=Color.DarkGray;
+                passwordTB.PasswordChar = Convert.ToChar(empty);
+            }
         }
     }
 }

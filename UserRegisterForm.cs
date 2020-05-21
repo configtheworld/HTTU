@@ -30,7 +30,7 @@ namespace HTTU
         private void RegisterNowButton_Click(object sender, EventArgs e)
         {
             UserAndPassControl user= new UserAndPassControl();
-            //user.newUser(nameTB,passwordTB,ConfirmTB,cityTB,groupBox1);
+            user.newUser(nameTB,passwordTB,ConfirmTB,groupBox1);
             this.Close();
         }
     }
