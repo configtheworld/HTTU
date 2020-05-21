@@ -16,12 +16,12 @@ namespace HTTU
 
         private SqlCommand cmd;
         private SqlDataReader reader;
-        public void newUser(TextBox Username, TextBox Password, TextBox repassword, GroupBox group)
+        public void newUser(TextBox Username, TextBox Password,TextBox Country,TextBox Provience ,TextBox repassword,float Lat,float Long, GroupBox group)
         {
             con.Open();
             cmd=new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "select *from tableSign where Username= '" + Username.Text + "'";
+            cmd.CommandText = "select *from tableSignAndLog where Username= '" + Username.Text + "'";
             reader = cmd.ExecuteReader();
             if (reader.Read()==false)
             {
@@ -31,7 +31,7 @@ namespace HTTU
                     con.Open();
                     cmd = new SqlCommand();
                     cmd.Connection = con;
-                    cmd.CommandText = "insert into tableSign values('" + Username.Text + "','" + Password.Text + "')";
+                    cmd.CommandText = "insert into tableSignAndLog values('" + Username.Text + "','" + Password.Text +"','"+Country.Text+ "','" + Provience.Text+ "','" + Lat + "','" + Long+ "')";
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("User Added!");
