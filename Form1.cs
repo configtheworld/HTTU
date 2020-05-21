@@ -74,7 +74,7 @@ namespace HTTU
 
         private void cikis_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+             Application.Exit();
         }
 
         private void Form1_Load(object sender, EventArgs e)
