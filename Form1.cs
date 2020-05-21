@@ -123,7 +123,7 @@ namespace HTTU
             if (nameTB.Text=="UserName")
             {
                 nameTB.Text = "";
-                
+                nameTB.ForeColor=Color.Black;
             }
         }
 
@@ -141,6 +141,7 @@ namespace HTTU
             if (passwordTB.Text=="Password")
             {
                 passwordTB.Text = "";
+                passwordTB.ForeColor=Color.Black;
                 passwordTB.PasswordChar = '*';
             }
         }
