@@ -58,20 +58,20 @@ namespace HTTU
         private void RegisterNowButton_Click(object sender, EventArgs e)
         {
             con_coordinates.Open();
-            cmd.CommandText = "SELECT lat FROM coordinates.dbo.iller where ilce=@_ilce";
-            cmd.Parameters.AddWithValue("_ilce", Country.SelectedItem.ToString());
-            Lat = (Int32)cmd.ExecuteScalar();
+            cmd.CommandText = "SELECT lat FROM coordinates.dbo.ilceler where ilce=@_ilce";
+            cmd.Parameters.AddWithValue("_ilce", Provience.SelectedItem.ToString());
+            Lat = Convert.ToSingle(cmd.ExecuteScalar());
             cmd.Parameters.Clear();
 
-            cmd.CommandText = "SELECT long FROM coordinates.dbo.iller where ilce=@_ilce";
-            cmd.Parameters.AddWithValue("_ilce", Country.SelectedItem.ToString());
-            Long = (Int32)cmd.ExecuteScalar();
+            cmd.CommandText = "SELECT long FROM coordinates.dbo.ilceler where ilce=@_ilce";
+            cmd.Parameters.AddWithValue("_ilce", Provience.SelectedItem.ToString());
+            Long = Convert.ToSingle(cmd.ExecuteScalar());
             cmd.Parameters.Clear();
 
 
 
             UserAndPassControl user= new UserAndPassControl();
-            user.newUser(nameTB,passwordTB,Country,Provience,ConfirmTB,Lat,Long,groupBox1);
+            user.newUser(nameTB,Country,Provience,passwordTB,ConfirmTB,Lat,Long,groupBox1);
             this.Close();
         }
 

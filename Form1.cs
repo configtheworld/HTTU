@@ -41,6 +41,7 @@ namespace HTTU
             var dt = connectdatabase();
             if (dt.Rows[0][0].ToString() == "1" && checkBox1.Checked)
             {
+                this.Hide();
                 Menu menu = new Menu();
                 menu.Show();
             }

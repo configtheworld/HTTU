@@ -60,6 +60,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.sonucpanel.SuspendLayout();
+            this.bilgipanel.SuspendLayout();
             this.soru1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -76,13 +77,14 @@
             // 
             // evet
             // 
+            this.evet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.evet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.evet.FlatAppearance.BorderSize = 0;
             this.evet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.evet.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.evet.ForeColor = System.Drawing.SystemColors.Info;
             this.evet.Image = ((System.Drawing.Image)(resources.GetObject("evet.Image")));
-            this.evet.Location = new System.Drawing.Point(412, 558);
+            this.evet.Location = new System.Drawing.Point(182, 351);
             this.evet.Name = "evet";
             this.evet.Size = new System.Drawing.Size(201, 87);
             this.evet.TabIndex = 1;
@@ -92,12 +94,14 @@
             // 
             // biraz
             // 
+            this.biraz.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.biraz.Cursor = System.Windows.Forms.Cursors.Hand;
             this.biraz.FlatAppearance.BorderSize = 0;
             this.biraz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.biraz.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.biraz.ForeColor = System.Drawing.SystemColors.Info;
             this.biraz.Image = ((System.Drawing.Image)(resources.GetObject("biraz.Image")));
-            this.biraz.Location = new System.Drawing.Point(707, 561);
+            this.biraz.Location = new System.Drawing.Point(435, 354);
             this.biraz.Name = "biraz";
             this.biraz.Size = new System.Drawing.Size(178, 81);
             this.biraz.TabIndex = 2;
@@ -107,12 +111,14 @@
             // 
             // hayır
             // 
+            this.hayır.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.hayır.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hayır.FlatAppearance.BorderSize = 0;
             this.hayır.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.hayır.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hayır.ForeColor = System.Drawing.SystemColors.Info;
             this.hayır.Image = ((System.Drawing.Image)(resources.GetObject("hayır.Image")));
-            this.hayır.Location = new System.Drawing.Point(1012, 558);
+            this.hayır.Location = new System.Drawing.Point(682, 351);
             this.hayır.Name = "hayır";
             this.hayır.Size = new System.Drawing.Size(184, 87);
             this.hayır.TabIndex = 3;
@@ -150,6 +156,9 @@
             // bilgipanel
             // 
             this.bilgipanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bilgipanel.BackgroundImage")));
+            this.bilgipanel.Controls.Add(this.evet);
+            this.bilgipanel.Controls.Add(this.biraz);
+            this.bilgipanel.Controls.Add(this.hayır);
             this.bilgipanel.Location = new System.Drawing.Point(0, 0);
             this.bilgipanel.Name = "bilgipanel";
             this.bilgipanel.Size = new System.Drawing.Size(1532, 508);
@@ -415,14 +424,12 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.soru1);
-            this.Controls.Add(this.hayır);
-            this.Controls.Add(this.biraz);
-            this.Controls.Add(this.evet);
             this.Controls.Add(this.sonucpanel);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.sonucpanel.ResumeLayout(false);
+            this.bilgipanel.ResumeLayout(false);
             this.soru1.ResumeLayout(false);
             this.soru1.PerformLayout();
             this.panel1.ResumeLayout(false);
