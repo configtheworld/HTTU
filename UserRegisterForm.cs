@@ -16,6 +16,7 @@ namespace HTTU
         SqlConnection con_coordinates = new SqlConnection(@"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = coordinates; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
         SqlCommand cmd;
         int il_id;
+
         public UserRegisterForm()
         {
             InitializeComponent();

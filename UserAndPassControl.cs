@@ -16,7 +16,7 @@ namespace HTTU
 
         private SqlCommand cmd;
         private SqlDataReader reader;
-        public void newUser(TextBox Username, TextBox Password,TextBox Country,TextBox Provience ,TextBox repassword,float Lat,float Long, GroupBox group)
+        public void newUser(TextBox Username, TextBox Password,ComboBox Country,ComboBox Provience ,TextBox repassword,float Lat,float Long, GroupBox group)
         {
             con.Open();
             cmd=new SqlCommand();
