@@ -50,12 +50,16 @@
             this.menubackbutton = new System.Windows.Forms.Button();
             this.cikis = new System.Windows.Forms.Button();
             this.MuteButton = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3back = new System.Windows.Forms.Button();
             this.testpanel.SuspendLayout();
             this.aboutuspanel.SuspendLayout();
             this.symtomspanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statspanel.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // testpanel
@@ -63,7 +67,7 @@
             this.testpanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("testpanel.BackgroundImage")));
             this.testpanel.Controls.Add(this.testbutton);
             this.testpanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.testpanel.Location = new System.Drawing.Point(406, 62);
+            this.testpanel.Location = new System.Drawing.Point(406, 56);
             this.testpanel.Name = "testpanel";
             this.testpanel.Size = new System.Drawing.Size(617, 382);
             this.testpanel.TabIndex = 8;
@@ -140,11 +144,13 @@
             this.aboutuspanel.Size = new System.Drawing.Size(617, 382);
             this.aboutuspanel.TabIndex = 11;
             this.aboutuspanel.TabStop = true;
+            this.aboutuspanel.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Info;
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.Location = new System.Drawing.Point(89, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(428, 272);
@@ -156,7 +162,7 @@
             this.backbutton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backbutton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.backbutton3.Image = ((System.Drawing.Image)(resources.GetObject("backbutton3.Image")));
-            this.backbutton3.Location = new System.Drawing.Point(189, 3);
+            this.backbutton3.Location = new System.Drawing.Point(188, 20);
             this.backbutton3.Name = "backbutton3";
             this.backbutton3.Size = new System.Drawing.Size(204, 62);
             this.backbutton3.TabIndex = 3;
@@ -168,7 +174,7 @@
             // 
             this.symtomspanel.Controls.Add(this.pictureBox1);
             this.symtomspanel.Controls.Add(this.backbutton1);
-            this.symtomspanel.Location = new System.Drawing.Point(406, 59);
+            this.symtomspanel.Location = new System.Drawing.Point(409, 56);
             this.symtomspanel.Name = "symtomspanel";
             this.symtomspanel.Size = new System.Drawing.Size(617, 382);
             this.symtomspanel.TabIndex = 9;
@@ -280,7 +286,7 @@
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(262, 110);
+            this.panel1.Size = new System.Drawing.Size(262, 92);
             this.panel1.TabIndex = 13;
             // 
             // menubackbutton
@@ -319,12 +325,48 @@
             this.MuteButton.UseVisualStyleBackColor = true;
             this.MuteButton.Click += new System.EventHandler(this.MuteButton_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.panel3back);
+            this.panel3.Location = new System.Drawing.Point(406, 56);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(617, 382);
+            this.panel3.TabIndex = 17;
+            this.panel3.TabStop = true;
+            this.panel3.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.Location = new System.Drawing.Point(89, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(428, 272);
+            this.label2.TabIndex = 4;
+            this.label2.Text = resources.GetString("label2.Text");
+            // 
+            // panel3back
+            // 
+            this.panel3back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.panel3back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.panel3back.Image = ((System.Drawing.Image)(resources.GetObject("panel3back.Image")));
+            this.panel3back.Location = new System.Drawing.Point(188, 20);
+            this.panel3back.Name = "panel3back";
+            this.panel3back.Size = new System.Drawing.Size(204, 62);
+            this.panel3back.TabIndex = 3;
+            this.panel3back.Text = "About us";
+            this.panel3back.UseVisualStyleBackColor = true;
+            this.panel3back.Click += new System.EventHandler(this.panel3back_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1203, 595);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.MuteButton);
             this.Controls.Add(this.testpanel);
             this.Controls.Add(this.symtomspanel);
@@ -342,6 +384,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.statspanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -369,5 +413,8 @@
         private System.Windows.Forms.Button profilebutton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button MuteButton;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button panel3back;
     }
 }
