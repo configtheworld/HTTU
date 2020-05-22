@@ -53,20 +53,27 @@ namespace HTTU
             }
 
 
-            public string TestMethod(int numberyes ,int numberquite)
+            public string TestMethod()
             {
                 int score;
-                
-                this.numberOfYes = numberyes;
-                this.numberOfquite = numberquite;
-                score = numberquite * 1 + numberyes * 3;
+
+               
+                score =  getnumberOfquite()* 1 + getnumberOfYes() * 3;
                 if (score > 35 && score <= 39)
                 {
                     return "En yakın zamanda hastaneye gitmelisiniz";
                 }
+                else if (score > 28 && score <= 35)
+                {
+                    return "Eğer belirtiler artar ise hastaneye gidebilirsiniz";
+                }
+                else if (score > 20 && score <= 28)
+                {
+                    return "evde kalıp beslenmenize ve hijyeninize dikkat edebilirsiniz";
+                }
                 else
                 {
-                    return "turp gibisiiniz";
+                    return "Sağlıklı gözüküyorsunuz evde kalın .Ecdadünü skrim haaa";
                 }
             }
         }
@@ -107,7 +114,9 @@ namespace HTTU
                     listpanel[index: Counter - 1].Visible = false;
                     sonucpanel.BringToFront(); 
                     sonucpanel.Visible=true;
-                }
+                    listpanel.Add(suser);
+                    suser.Visible = true;
+            }
                 
 
         }
@@ -128,6 +137,8 @@ namespace HTTU
                 listpanel[index: Counter - 1].Visible = false;
                 sonucpanel.BringToFront();
                 sonucpanel.Visible = true;
+                listpanel.Add(suser);
+                suser.Visible = true;
             }
         }
 
@@ -146,7 +157,9 @@ namespace HTTU
                 listpanel[index: Counter-1].Visible = false;
                 sonucpanel.BringToFront();
                 sonucpanel.Visible = true;
-                
+                listpanel.Add(suser);
+                suser.Visible = true;
+
             }
 
         }
@@ -158,19 +171,19 @@ namespace HTTU
 
         private void resultbutton_Click(object sender, EventArgs e)
         {
-            String a=aday.TestMethod(aday.getnumberOfYes(), aday.getnumberOfquite());
-            if (a.Equals("En yakın zamanda hastaneye gitmelisiniz"))
-            {
-                MessageBox.Show("Don't forget to wash your hands :)", "Stay Alive",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-            }
-            else if(a.Equals("turp gibisiiniz"))
-            {
+            sonucbox.Text = aday.TestMethod(/*aday.getnumberOfYes(), aday.getnumberOfquite()*/);
 
-            }
+            listpanel.Add(sonucekrani);
+            sonucekrani.Visible = true;
+            sonucekrani.BringToFront();
             
+
+
         }
-        
+
+        private void cikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
