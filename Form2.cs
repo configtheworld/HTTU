@@ -71,9 +71,13 @@ namespace HTTU
                 {
                     return "evde kalıp beslenmenize ve hijyeninize dikkat edebilirsiniz";
                 }
-                else
+                else if(score<=20)
                 {
                     return "Sağlıklı gözüküyorsunuz evde kalın .Ecdadünü skrim haaa";
+                }
+                else
+                {
+                    return "";
                 }
             }
         }

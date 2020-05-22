@@ -235,16 +235,16 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.profilebutton);
             this.panel2.Controls.Add(this.testbuttondash);
-            this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.aboutusbutton);
             this.panel2.Controls.Add(this.statsbutton);
             this.panel2.Controls.Add(this.symptomsbutton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(262, 595);
+            this.panel2.Size = new System.Drawing.Size(269, 595);
             this.panel2.TabIndex = 14;
             // 
             // profilebutton
@@ -278,9 +278,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Location = new System.Drawing.Point(0, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(262, 110);
+            this.panel1.Size = new System.Drawing.Size(326, 112);
             this.panel1.TabIndex = 13;
             // 
             // menubackbutton

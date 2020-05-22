@@ -36,7 +36,6 @@ namespace HTTU
             symtomspanel.Visible = false;
             testpanel.Visible = false;
             statspanel.Visible = false;
-            aboutuspanel.Visible = false;
             aboutuspanel.Visible = true;
         }
 
@@ -123,7 +122,9 @@ namespace HTTU
 
         private void Menu_Load(object sender, EventArgs e)
         {
-
+            symtomspanel.Visible = false;
+            aboutuspanel.Visible = false;
+            statspanel.Visible = false;
         }
 
         bool playerstate = false;
