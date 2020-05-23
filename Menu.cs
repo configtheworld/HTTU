@@ -10,18 +10,20 @@ using System.Windows.Forms;
 
 namespace HTTU
 {
-    
+
     public partial class Menu : Form
     {
 
         List<Panel> listpanel = new List<Panel>();
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+
         public Menu()
         {
             InitializeComponent();
             player.SoundLocation = "coffin-dance-official-music-video-hd.wav";
-            
+
         }
+
         private void Menu_Load(object sender, EventArgs e)
         {
             symtomspanel.Visible = false;
@@ -46,7 +48,7 @@ namespace HTTU
             symtomspanel.Visible = false;
             testpanel.Visible = false;
             statspanel.Visible = false;
-            aboutuspanel.Visible =false;
+            aboutuspanel.Visible = false;
             panel3.Visible = true;
         }
 
@@ -58,6 +60,7 @@ namespace HTTU
             statspanel.Visible = true;
             panel3.Visible = false;
         }
+
         private void testbuttondash_Click(object sender, EventArgs e)
         {
             aboutuspanel.Visible = false;
@@ -67,9 +70,10 @@ namespace HTTU
             panel3.Visible = false;
         }
 
-        
+
         private void button1_Click(object sender, EventArgs e)
-        {// android back buttonu
+        {
+            // android back buttonu
             aboutuspanel.Visible = false;
             symtomspanel.Visible = false;
             statspanel.Visible = false;
@@ -91,6 +95,7 @@ namespace HTTU
             statspanel.Visible = false;
             panel3.Visible = false;
         }
+
         private void backbutton3_Click(object sender, EventArgs e)
         {
             /* about us back button
@@ -121,15 +126,15 @@ namespace HTTU
             panel3.Visible = false;
         }
 
-       
+
         private void testbutton_Click(object sender, EventArgs e)
         {
             //testi başlatan buton
-            
+
             Form2 form2 = new Form2();
             form2.Show();
         }
-        
+
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             //web browser panelinin kodu url kendisinde
@@ -143,17 +148,23 @@ namespace HTTU
             profile.Show();
         }
 
-        
 
-        bool playerstate = false;
+        
         private void MuteButton_Click(object sender, EventArgs e)
         {
             //menunun mute butonu
-           
-            playerstate = mutesong.mute(player, playerstate);
+            if (Form1.playerstate)
+            {
+                mutesong.mute(player, true);
+                Form1.playerstate = false;
+            }
+            else
+            {
+                mutesong.mute(player, false);
+                Form1.playerstate = true;
+            }
+
 
         }
-
-        
     }
 }

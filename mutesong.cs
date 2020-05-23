@@ -10,19 +10,21 @@ namespace HTTU
 {
     class mutesong
     {
-
+        public static bool meme;
         public static bool mute(SoundPlayer player, bool playerstate)
         {
             
             if (playerstate)
             {
                 player.Stop();
-               return playerstate = false;
+                
+               return false;
             }
             else
-            {
+            { 
                 player.Play();
-               return playerstate = true;
+                
+                return  true;
             }
 
         }

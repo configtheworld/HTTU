@@ -88,9 +88,9 @@
             this.ForgotPass.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForgotPass.Location = new System.Drawing.Point(107, 149);
             this.ForgotPass.Name = "ForgotPass";
-            this.ForgotPass.Size = new System.Drawing.Size(79, 20);
+            this.ForgotPass.Size = new System.Drawing.Size(118, 20);
             this.ForgotPass.TabIndex = 13;
-            this.ForgotPass.Text = "Password";
+            this.ForgotPass.Text = "New Password";
             // 
             // Passwordforgot
             // 

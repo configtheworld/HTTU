@@ -105,8 +105,8 @@ namespace HTTU
         }
 
 
-        bool playerstate = false;
-        private void MuteButton_Click_1(object sender, EventArgs e)
+       public static bool playerstate = false;
+        private void  MuteButton_Click_1(object sender, EventArgs e)
         {
             //girişin mute butonu
             
