@@ -22,13 +22,23 @@ namespace HTTU
             player.SoundLocation = "coffin-dance-official-music-video-hd.wav";
             
         }
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            symtomspanel.Visible = false;
+            statspanel.Visible = false;
+            aboutuspanel.Visible = false;
+            panel3.Visible = false;
+
+        }
         // menu buttonları
+
         private void symptomsbutton_Click(object sender, EventArgs e)
         {
             aboutuspanel.Visible = false;
             symtomspanel.Visible = true;
             testpanel.Visible = false;
             statspanel.Visible = false;
+            panel3.Visible = false;
         }
 
         private void aboutusbutton_Click(object sender, EventArgs e)
@@ -36,7 +46,8 @@ namespace HTTU
             symtomspanel.Visible = false;
             testpanel.Visible = false;
             statspanel.Visible = false;
-            aboutuspanel.Visible = true;
+            aboutuspanel.Visible =false;
+            panel3.Visible = true;
         }
 
         private void statsbutton_Click(object sender, EventArgs e)
@@ -45,6 +56,7 @@ namespace HTTU
             symtomspanel.Visible = false;
             testpanel.Visible = false;
             statspanel.Visible = true;
+            panel3.Visible = false;
         }
         private void testbuttondash_Click(object sender, EventArgs e)
         {
@@ -52,6 +64,7 @@ namespace HTTU
             symtomspanel.Visible = false;
             statspanel.Visible = false;
             testpanel.Visible = true;
+            panel3.Visible = false;
         }
 
         
@@ -61,6 +74,7 @@ namespace HTTU
             symtomspanel.Visible = false;
             statspanel.Visible = false;
             testpanel.Visible = true;
+            panel3.Visible = false;
         }
 
         private void cikis_Click(object sender, EventArgs e)
@@ -69,15 +83,22 @@ namespace HTTU
             Application.Exit();
         }
 
-        
-
-        private void backbutton3_Click(object sender, EventArgs e)
+        private void panel3back_Click(object sender, EventArgs e)
         {
-            // about us back button
             aboutuspanel.Visible = false;
             symtomspanel.Visible = false;
             testpanel.Visible = true;
             statspanel.Visible = false;
+            panel3.Visible = false;
+        }
+        private void backbutton3_Click(object sender, EventArgs e)
+        {
+            /* about us back button
+            aboutuspanel.Visible = false;
+            symtomspanel.Visible = false;
+            testpanel.Visible = true;
+            statspanel.Visible = false;
+            panel3.Visible = false;*/
         }
 
         private void backbutton1_Click(object sender, EventArgs e)
@@ -87,6 +108,7 @@ namespace HTTU
             symtomspanel.Visible = false;
             testpanel.Visible = true;
             statspanel.Visible = false;
+            panel3.Visible = false;
         }
 
         private void backbutton2_Click(object sender, EventArgs e)
@@ -96,6 +118,7 @@ namespace HTTU
             symtomspanel.Visible = false;
             testpanel.Visible = true;
             statspanel.Visible = false;
+            panel3.Visible = false;
         }
 
        
@@ -135,5 +158,7 @@ namespace HTTU
             playerstate = mutesong.mute(player, playerstate);
 
         }
+
+        
     }
 }
