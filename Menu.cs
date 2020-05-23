@@ -143,12 +143,7 @@ namespace HTTU
             profile.Show();
         }
 
-        private void Menu_Load(object sender, EventArgs e)
-        {
-            symtomspanel.Visible = false;
-            aboutuspanel.Visible = false;
-            statspanel.Visible = false;
-        }
+        
 
         bool playerstate = false;
         private void MuteButton_Click(object sender, EventArgs e)

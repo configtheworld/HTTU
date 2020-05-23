@@ -44,9 +44,9 @@
             this.backbutton2 = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.profilebutton = new System.Windows.Forms.Button();
             this.testbuttondash = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.menubackbutton = new System.Windows.Forms.Button();
             this.cikis = new System.Windows.Forms.Button();
             this.MuteButton = new System.Windows.Forms.Button();
@@ -76,6 +76,7 @@
             // testbutton
             // 
             this.testbutton.BackColor = System.Drawing.Color.Transparent;
+            this.testbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.testbutton.FlatAppearance.BorderSize = 0;
             this.testbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.testbutton.ForeColor = System.Drawing.Color.Transparent;
@@ -253,6 +254,15 @@
             this.panel2.Size = new System.Drawing.Size(269, 595);
             this.panel2.TabIndex = 14;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(262, 92);
+            this.panel1.TabIndex = 13;
+            // 
             // profilebutton
             // 
             this.profilebutton.BackColor = System.Drawing.Color.Transparent;
@@ -279,15 +289,6 @@
             this.testbuttondash.TabIndex = 14;
             this.testbuttondash.UseVisualStyleBackColor = false;
             this.testbuttondash.Click += new System.EventHandler(this.testbuttondash_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(262, 92);
-            this.panel1.TabIndex = 13;
             // 
             // menubackbutton
             // 
@@ -329,7 +330,7 @@
             // 
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.panel3back);
-            this.panel3.Location = new System.Drawing.Point(406, 56);
+            this.panel3.Location = new System.Drawing.Point(403, 59);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(617, 382);
             this.panel3.TabIndex = 17;
