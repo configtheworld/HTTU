@@ -42,7 +42,7 @@ namespace HTTU
             if (dt.Rows[0][0].ToString() == "1" && checkBox1.Checked)
             {
                 this.Hide();
-                Menu menu = new Menu();
+                Menu menu = new Menu(nameTB.Text);
                 menu.Show();
             }
 

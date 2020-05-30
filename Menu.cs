@@ -13,14 +13,17 @@ namespace HTTU
     
     public partial class Menu : Form
     {
+        private String _loggedUserName;
 
         List<Panel> listpanel = new List<Panel>();
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-        public Menu()
+
+        public Menu(String loggedUserName)
         {
             InitializeComponent();
             player.SoundLocation = "coffin-dance-official-music-video-hd.wav";
-            
+            _loggedUserName = loggedUserName;
+       
         }
         // menu buttonları
         private void symptomsbutton_Click(object sender, EventArgs e)
@@ -133,6 +136,12 @@ namespace HTTU
            
             playerstate = mutesong.mute(player, playerstate);
 
+        }
+
+        private void mapButton_Click(object sender, EventArgs e)
+        {
+            MapForm mapForm = new MapForm(_loggedUserName);
+            mapForm.Show();
         }
     }
 }
