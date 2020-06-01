@@ -24,13 +24,12 @@ namespace HTTU
         public MapForm(String loggedUsername)
         {
             InitializeComponent();
+            _loggedUserName = loggedUsername;
 
             SqlConnection tableSignAndLog_connection = new SqlConnection(conStr);
 
-            String sql_command = "Select Lat, Long From dbo.tableSignAndLog";
-
-            _loggedUserName = loggedUsername;
-
+            String sql_command = "Select Lat, Long From dbo.tableSignAndLog WHERE Sick=1";
+            SqlCommand command = new SqlCommand(sql_command, tableSignAndLog_connection);
 
             Bitmap circleMarker = (Bitmap)Image.FromFile("circle.png");
             PointLatLng[] point = new PointLatLng[255];
@@ -40,9 +39,9 @@ namespace HTTU
 
             try
             {
-                MessageBox.Show(_loggedUserName);
+               
                 tableSignAndLog_connection.Open();
-                SqlCommand command = new SqlCommand(sql_command, tableSignAndLog_connection);
+               
                 dataReader = command.ExecuteReader();
                 int i = 0;
                 while (dataReader.Read())

@@ -107,7 +107,7 @@ namespace HTTU
         {
             //testi başlatan buton
             
-            Form2 form2 = new Form2();
+            Form2 form2 = new Form2(_loggedUserName);
             form2.Show();
         }
         
