@@ -18,6 +18,7 @@ namespace HTTU
 
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
        
+        public static SqlConnection con1= new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\doki_\OneDrive\Belgeler\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
         
         public Form1()
         {
@@ -62,7 +63,7 @@ namespace HTTU
         {
             SqlConnection con =
                 new SqlConnection(
-                    @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\suser\source\repos\HTTU\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
+                    @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\doki_\OneDrive\Belgeler\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
             SqlDataAdapter sqa =
                 new SqlDataAdapter(
                     "Select count(*) From tableSignAndLog where Username ='" + nameTB.Text + "'and Password ='" + passwordTB.Text +
@@ -104,8 +105,8 @@ namespace HTTU
         }
 
 
-        bool playerstate = false;
-        private void MuteButton_Click_1(object sender, EventArgs e)
+       public static bool playerstate = false;
+        private void  MuteButton_Click_1(object sender, EventArgs e)
         {
             //girişin mute butonu
             
@@ -156,6 +157,13 @@ namespace HTTU
                 passwordTB.ForeColor=Color.DarkGray;
                 passwordTB.PasswordChar = Convert.ToChar(empty);
             }
+        }
+
+        private void forgotpass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Forgotmypass forgotmypass = new Forgotmypass();
+            forgotmypass.ShowDialog();
+
         }
     }
 }

@@ -59,8 +59,11 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.sonucekrani = new System.Windows.Forms.Panel();
+            this.sonucbox = new System.Windows.Forms.TextBox();
+            this.suser = new System.Windows.Forms.Panel();
+            this.cikis = new System.Windows.Forms.Button();
             this.sonucpanel.SuspendLayout();
-            this.bilgipanel.SuspendLayout();
             this.soru1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -73,6 +76,8 @@
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.sonucekrani.SuspendLayout();
+            this.suser.SuspendLayout();
             this.SuspendLayout();
             // 
             // evet
@@ -84,7 +89,7 @@
             this.evet.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.evet.ForeColor = System.Drawing.SystemColors.Info;
             this.evet.Image = ((System.Drawing.Image)(resources.GetObject("evet.Image")));
-            this.evet.Location = new System.Drawing.Point(182, 351);
+            this.evet.Location = new System.Drawing.Point(325, 596);
             this.evet.Name = "evet";
             this.evet.Size = new System.Drawing.Size(201, 87);
             this.evet.TabIndex = 1;
@@ -101,7 +106,7 @@
             this.biraz.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.biraz.ForeColor = System.Drawing.SystemColors.Info;
             this.biraz.Image = ((System.Drawing.Image)(resources.GetObject("biraz.Image")));
-            this.biraz.Location = new System.Drawing.Point(435, 354);
+            this.biraz.Location = new System.Drawing.Point(604, 599);
             this.biraz.Name = "biraz";
             this.biraz.Size = new System.Drawing.Size(178, 81);
             this.biraz.TabIndex = 2;
@@ -118,7 +123,7 @@
             this.hayır.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hayır.ForeColor = System.Drawing.SystemColors.Info;
             this.hayır.Image = ((System.Drawing.Image)(resources.GetObject("hayır.Image")));
-            this.hayır.Location = new System.Drawing.Point(682, 351);
+            this.hayır.Location = new System.Drawing.Point(879, 596);
             this.hayır.Name = "hayır";
             this.hayır.Size = new System.Drawing.Size(184, 87);
             this.hayır.TabIndex = 3;
@@ -156,9 +161,6 @@
             // bilgipanel
             // 
             this.bilgipanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bilgipanel.BackgroundImage")));
-            this.bilgipanel.Controls.Add(this.evet);
-            this.bilgipanel.Controls.Add(this.biraz);
-            this.bilgipanel.Controls.Add(this.hayır);
             this.bilgipanel.Location = new System.Drawing.Point(0, 0);
             this.bilgipanel.Name = "bilgipanel";
             this.bilgipanel.Size = new System.Drawing.Size(1532, 508);
@@ -412,12 +414,57 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Burun akıntısı, halsizlik, vücut ağrınız var mı?";
             // 
+            // sonucekrani
+            // 
+            this.sonucekrani.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sonucekrani.BackgroundImage")));
+            this.sonucekrani.Controls.Add(this.sonucbox);
+            this.sonucekrani.Location = new System.Drawing.Point(46, 34);
+            this.sonucekrani.Name = "sonucekrani";
+            this.sonucekrani.Size = new System.Drawing.Size(1532, 508);
+            this.sonucekrani.TabIndex = 20;
+            this.sonucekrani.Visible = false;
+            // 
+            // sonucbox
+            // 
+            this.sonucbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(141)))), ((int)(((byte)(174)))));
+            this.sonucbox.Font = new System.Drawing.Font("Calibri", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sonucbox.Location = new System.Drawing.Point(145, 189);
+            this.sonucbox.Name = "sonucbox";
+            this.sonucbox.Size = new System.Drawing.Size(1063, 65);
+            this.sonucbox.TabIndex = 0;
+            // 
+            // suser
+            // 
+            this.suser.Controls.Add(this.cikis);
+            this.suser.Location = new System.Drawing.Point(268, 579);
+            this.suser.Name = "suser";
+            this.suser.Size = new System.Drawing.Size(991, 409);
+            this.suser.TabIndex = 21;
+            this.suser.Visible = false;
+            // 
+            // cikis
+            // 
+            this.cikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cikis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.cikis.Image = ((System.Drawing.Image)(resources.GetObject("cikis.Image")));
+            this.cikis.Location = new System.Drawing.Point(368, 21);
+            this.cikis.Name = "cikis";
+            this.cikis.Size = new System.Drawing.Size(121, 116);
+            this.cikis.TabIndex = 17;
+            this.cikis.UseVisualStyleBackColor = true;
+            this.cikis.Click += new System.EventHandler(this.cikis_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1759, 1055);
+            this.Controls.Add(this.suser);
+            this.Controls.Add(this.sonucekrani);
+            this.Controls.Add(this.hayır);
+            this.Controls.Add(this.biraz);
+            this.Controls.Add(this.evet);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
@@ -429,7 +476,6 @@
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.sonucpanel.ResumeLayout(false);
-            this.bilgipanel.ResumeLayout(false);
             this.soru1.ResumeLayout(false);
             this.soru1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -454,6 +500,9 @@
             this.panel11.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            this.sonucekrani.ResumeLayout(false);
+            this.sonucekrani.PerformLayout();
+            this.suser.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -489,5 +538,9 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel sonucekrani;
+        private System.Windows.Forms.TextBox sonucbox;
+        private System.Windows.Forms.Panel suser;
+        private System.Windows.Forms.Button cikis;
     }
 }

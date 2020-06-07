@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace HTTU
 {
-    
+
     public partial class Menu : Form
     {
         private String _loggedUserName;
@@ -25,13 +25,24 @@ namespace HTTU
             _loggedUserName = loggedUserName;
        
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            symtomspanel.Visible = false;
+            statspanel.Visible = false;
+            aboutuspanel.Visible = false;
+            panel3.Visible = false;
+
+        }
         // menu buttonları
+
         private void symptomsbutton_Click(object sender, EventArgs e)
         {
             aboutuspanel.Visible = false;
             symtomspanel.Visible = true;
             testpanel.Visible = false;
             statspanel.Visible = false;
+            panel3.Visible = false;
         }
 
         private void aboutusbutton_Click(object sender, EventArgs e)
@@ -40,7 +51,7 @@ namespace HTTU
             testpanel.Visible = false;
             statspanel.Visible = false;
             aboutuspanel.Visible = false;
-            aboutuspanel.Visible = true;
+            panel3.Visible = true;
         }
 
         private void statsbutton_Click(object sender, EventArgs e)
@@ -49,22 +60,27 @@ namespace HTTU
             symtomspanel.Visible = false;
             testpanel.Visible = false;
             statspanel.Visible = true;
+            panel3.Visible = false;
         }
+
         private void testbuttondash_Click(object sender, EventArgs e)
         {
             aboutuspanel.Visible = false;
             symtomspanel.Visible = false;
             statspanel.Visible = false;
             testpanel.Visible = true;
+            panel3.Visible = false;
         }
 
-        
+
         private void button1_Click(object sender, EventArgs e)
-        {// android back buttonu
+        {
+            // android back buttonu
             aboutuspanel.Visible = false;
             symtomspanel.Visible = false;
             statspanel.Visible = false;
             testpanel.Visible = true;
+            panel3.Visible = false;
         }
 
         private void cikis_Click(object sender, EventArgs e)
@@ -73,15 +89,23 @@ namespace HTTU
             Application.Exit();
         }
 
-        
-
-        private void backbutton3_Click(object sender, EventArgs e)
+        private void panel3back_Click(object sender, EventArgs e)
         {
-            // about us back button
             aboutuspanel.Visible = false;
             symtomspanel.Visible = false;
             testpanel.Visible = true;
             statspanel.Visible = false;
+            panel3.Visible = false;
+        }
+
+        private void backbutton3_Click(object sender, EventArgs e)
+        {
+            /* about us back button
+            aboutuspanel.Visible = false;
+            symtomspanel.Visible = false;
+            testpanel.Visible = true;
+            statspanel.Visible = false;
+            panel3.Visible = false;*/
         }
 
         private void backbutton1_Click(object sender, EventArgs e)
@@ -91,6 +115,7 @@ namespace HTTU
             symtomspanel.Visible = false;
             testpanel.Visible = true;
             statspanel.Visible = false;
+            panel3.Visible = false;
         }
 
         private void backbutton2_Click(object sender, EventArgs e)
@@ -100,9 +125,10 @@ namespace HTTU
             symtomspanel.Visible = false;
             testpanel.Visible = true;
             statspanel.Visible = false;
+            panel3.Visible = false;
         }
 
-       
+
         private void testbutton_Click(object sender, EventArgs e)
         {
             //testi başlatan buton
@@ -110,7 +136,7 @@ namespace HTTU
             Form2 form2 = new Form2(_loggedUserName);
             form2.Show();
         }
-        
+
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             //web browser panelinin kodu url kendisinde
@@ -124,17 +150,22 @@ namespace HTTU
             profile.Show();
         }
 
-        private void Menu_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        bool playerstate = false;
+        
         private void MuteButton_Click(object sender, EventArgs e)
         {
             //menunun mute butonu
-           
-            playerstate = mutesong.mute(player, playerstate);
+            if (Form1.playerstate)
+            {
+                mutesong.mute(player, true);
+                Form1.playerstate = false;
+            }
+            else
+            {
+                mutesong.mute(player, false);
+                Form1.playerstate = true;
+            }
+
 
         }
 

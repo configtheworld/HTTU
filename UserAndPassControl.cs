@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace HTTU
 {
-    class UserAndPassControl 
+    class UserAndPassControl
     {
         
         SqlConnection con =
@@ -26,6 +26,7 @@ namespace HTTU
             reader = cmd.ExecuteReader();
             if (reader.Read()==false)
             {
+                
                 if (Password.Text == repassword.Text)
                 {
                     con.Close();
@@ -52,6 +53,47 @@ namespace HTTU
             else
             {
                 MessageBox.Show("Username already exists");
+            }
+        }
+
+        public bool newpass(TextBox Username,TextBox Password,TextBox Repassword)
+        {
+            if (Password.Text == Repassword.Text)
+            {
+                con.Open();
+                cmd = new SqlCommand("select *from tableSignAndLog where  Username= '" + Username.Text + "'" , con);
+                reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    con.Close();
+                    con.Open();
+                    cmd=new SqlCommand("update tableSignAndLog set Password= '"+Password.Text+"'where Username='"+Username.Text+"'",con);
+                    cmd.ExecuteScalar();
+                    con.Close();
+                    if (Password.Text!="")
+                    {
+                        MessageBox.Show("User successfully added");
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Password must be filled");
+                        return false;
+                    }
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Please enter your Account Username", "error");
+                    con.Close();
+                    return false;
+                    
+                }
+            }
+            else
+            {
+                MessageBox.Show("Passwords dont match!", "error");
+                return false;
             }
         }
     }
