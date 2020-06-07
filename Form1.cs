@@ -18,7 +18,7 @@ namespace HTTU
 
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
        
-        public static SqlConnection con1= new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\doki_\OneDrive\Belgeler\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
+        public static SqlConnection con1= new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\suser\source\repos\HTTU\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
         
         public Form1()
         {

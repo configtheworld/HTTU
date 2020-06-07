@@ -30,7 +30,7 @@ namespace HTTU
                     con.Open();
                     cmd = new SqlCommand();
                     cmd.Connection = con;
-                    cmd.CommandText = "insert into tableSignAndLog values('" + Username.Text + "','" + Country.Text+ "','" + Provience.Text+"','" + Password.Text + "','" + Lat + "','" + Long + "')";
+                    cmd.CommandText = "insert into tableSignAndLog values('" + Username.Text + "','" + Country.Text + "','" + Provience.Text + "','" + Password.Text + "','" + Lat + "','" + Long + "','" + "0" + "')";
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("User Added!");
