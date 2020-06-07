@@ -7,31 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Messaging;
 
 namespace HTTU
 {
     public partial class Form2 : Form
     {
+        static String _loggedUserName;
         List<Panel> listpanel=new List<Panel>();
         private int Counter;
 
-        Test aday= new Test();
-        
-        public Form2()
+        Test aday = new Test();
+
+        public Form2(String loggedUsername)
         {
             InitializeComponent();
+            _loggedUserName = loggedUsername;
         }
         // test clasımız
         class Test
         {
+            
             private int numberOfYes=0;
             private int numberOfquite=0;
-
-            public Test(/*int yes, int quite*/)
-            {
-                /*this.numberOfYes = yes;
-                this.numberOfquite = quite;*/
-            }
 
             public int getnumberOfYes()
             {
@@ -61,6 +60,20 @@ namespace HTTU
                 score =  getnumberOfquite()* 1 + getnumberOfYes() * 3;
                 if (score > 35 && score <= 39)
                 {
+
+
+                    SqlConnection con =
+                        new SqlConnection(
+                            @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\suser\source\repos\HTTU\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = con;
+                    cmd.CommandText = "UPDATE dbo.tableSignAndLog SET Sick = @sick Where Username = @username ";
+                    cmd.Parameters.AddWithValue("@sick", 1);
+                    cmd.Parameters.AddWithValue("@username", Form2._loggedUserName );
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
                     return "En yakın zamanda hastaneye gitmelisiniz";
                 }
                 else if (score > 28 && score <= 35)
