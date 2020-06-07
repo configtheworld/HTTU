@@ -19,6 +19,7 @@ namespace HTTU
     {
         String _loggedUserName;
         SqlDataReader dataReader;
+
         String conStr = @" Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\SUSER\SOURCE\REPOS\HTTU\HASTADB.MDF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         
         public MapForm(String loggedUsername)
