@@ -40,7 +40,8 @@
             this.Map.GrayScaleMode = false;
             this.Map.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.Map.LevelsKeepInMemmory = 5;
-            this.Map.Location = new System.Drawing.Point(27, 74);
+            this.Map.Location = new System.Drawing.Point(36, 91);
+            this.Map.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Map.MarkersEnabled = true;
             this.Map.MaxZoom = 2;
             this.Map.MinZoom = 2;
@@ -54,7 +55,7 @@
             this.Map.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.Map.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.Map.ShowTileGridLines = false;
-            this.Map.Size = new System.Drawing.Size(481, 402);
+            this.Map.Size = new System.Drawing.Size(641, 495);
             this.Map.TabIndex = 0;
             this.Map.Zoom = 0D;
             // 
@@ -63,22 +64,24 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.label1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label1.Location = new System.Drawing.Point(423, 30);
+            this.label1.Location = new System.Drawing.Point(564, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 24);
+            this.label1.Size = new System.Drawing.Size(403, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "INFECTED PEOPLE AROUND YOU";
             // 
             // MapForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 569);
+            this.ClientSize = new System.Drawing.Size(1063, 700);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Map);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MapForm";
             this.Text = "Corona Map";
+            this.Load += new System.EventHandler(this.MapForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -64,7 +64,7 @@ namespace HTTU
 
                     SqlConnection con =
                         new SqlConnection(
-                            @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\suser\source\repos\HTTU\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
+                            @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\doki_\source\repos\HTTUsunum7haziran\hastadb.mdf;Integrated Security=True;Connect Timeout=30");
                     con.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = con;
