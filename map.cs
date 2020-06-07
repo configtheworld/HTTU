@@ -19,7 +19,7 @@ namespace HTTU
     {
         String _loggedUserName;
         SqlDataReader dataReader;
-        String conStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\doki_\source\repos\HTTUsunum7haziran\hastadb.mdf;Integrated Security=True;Connect Timeout=30";
+        String conStr = @" Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\SUSER\SOURCE\REPOS\HTTU\HASTADB.MDF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         
         public MapForm(String loggedUsername)
         {
@@ -74,7 +74,7 @@ namespace HTTU
             Map.Overlays.Add(markers);
         }
 
-        private void MapForm_Load(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
