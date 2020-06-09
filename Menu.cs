@@ -36,11 +36,8 @@ namespace HTTU
 
         private void aboutusbutton_Click(object sender, EventArgs e)
         {
-            symtomspanel.Visible = false;
-            testpanel.Visible = false;
-            statspanel.Visible = false;
-            aboutuspanel.Visible = false;
-            aboutuspanel.Visible = true;
+            MessageBox.Show("Hello this is our BM102 C# programming lecture project." + Environment.NewLine + "Our aim is early diagnosis and tracking test proccess for Covid - 19" + Environment.NewLine + "Of course we dont give accurate dna test result but comparing" + Environment.NewLine + "Of course we dont give accurate dna test result but comparing " + "symptoms and giving people should go to hospital or stay at home" + Environment.NewLine + "Erkin Berk Türe" + Environment.NewLine + "Gökay Dindar" + Environment.NewLine + "DOGUKAN OKCU");
+
         }
 
         private void statsbutton_Click(object sender, EventArgs e)
