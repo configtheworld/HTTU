@@ -49,7 +49,6 @@ namespace HTTU
                 {
                   
                     point[i] = new PointLatLng(Convert.ToDouble(dataReader.GetValue(0)), Convert.ToDouble(dataReader.GetValue(1)));
-
                     marker[i] = new GMarkerGoogle(point[i],circleMarker);
                     markers.Markers.Add(marker[i]);
 

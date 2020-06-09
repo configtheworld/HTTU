@@ -86,7 +86,7 @@ namespace HTTU
                 }
                 else if(score<=20)
                 {
-                    return "Sağlıklı gözüküyorsunuz evde kalın .Ecdadünü skrim haaa";
+                    return "Sağlıklı gözüküyorsunuz evde kalın.";
                 }
                 else
                 {
